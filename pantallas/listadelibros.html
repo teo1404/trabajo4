@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual</title>
+    <link rel="stylesheet" href="../css/stylos.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Virtual</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Inicio</a></li>
+                <li><a href="#" onclick="showSection('favorites')">Favoritos</a></li>
+                <li><a href="#" onclick="showSection('search')">Buscar</a></li>
+                <li><a href="#" onclick="showSection('addReview')">Añadir Reseña</a></li>
+                <li><a href="#" onclick="showSection('reviews')">Ver Reseñas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section">
+            <h2>Lista de Libros</h2>
+            <div id="book-list"></div>
+        </section>
+        <section id="details" class="section">
+            <h2>Detalles del Libro</h2>
+            <div id="book-details"></div>
+        </section>
+        <section id="favorites" class="section">
+            <h2>Libros Favoritos</h2>
+            <div id="favorites-list"></div>
+        </section>
+        <section id="search" class="section">
+            <form id="search-form">
+                <h2>Buscar Libros</h2>
+                <input type="text" id="search-query" placeholder="Buscar por título o autor">
+                <button type="submit">Buscar</button>
+            </form>
+            <div id="search-results"></div>
+        </section>
+        <section id="addReview" class="section">
+            <form id="review-form">
+                <h2>Añadir Reseña</h2>
+                <label for="book-id">ID del Libro:</label>
+                <input type="text" id="book-id" name="book-id" required>
+                <label for="review-text">Reseña:</label>
+                <textarea id="review-text" name="review-text" required></textarea>
+                <button type="submit">Enviar Reseña</button>
+            </form>
+        </section>
+        <section id="reviews" class="section">
+            <h2>Reseñas</h2>
+            <div id="review-list"></div>
+        </section>
+    </main>
+    
+
+    <script src="../data/script.js"></script>
+</body>
+</html>
